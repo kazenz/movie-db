@@ -2,9 +2,11 @@
   "name": "movie-db",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://frytagg.de/movie-search",
   "dependencies": {
     "@material-ui/core": "^4.0.0-rc.0",
     "jquery": "^3.4.1",
+    "materialize-css": "^1.0.0-rc.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"

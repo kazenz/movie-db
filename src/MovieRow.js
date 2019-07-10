@@ -8,7 +8,7 @@ export class MovieRow extends Component {
   render() {
     return (
       <table key={this.props.movie.id}>
-        <tbody>
+        <tbody className="cellAlign">
           <tr>
             <td>
               <img alt="poster" width="120" src={this.props.movie.poster_src} />
@@ -16,7 +16,12 @@ export class MovieRow extends Component {
             <td>
               <h3>{this.props.movie.title}</h3>
               <p>{this.props.movie.overview}</p>
-              <input type="button" onClick={this.viewMovie} value="View" />
+              <input
+                type="button"
+                className="btn"
+                onClick={this.viewMovie}
+                value="View"
+              />
             </td>
           </tr>
         </tbody>
