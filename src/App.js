@@ -6,29 +6,9 @@ import $ from "jquery";
 class App extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {};
-
-    //const movies = [
-    //  { id: 0, title: "Avengers", overview: "movie description" },
-    //  { id: 1, title: "The Fog", overview: "movie description" }
-    //   ];
-
-    //   this.state = {
-    //     rows: [
-    //       <p key="1">This is row 0</p>,
-    //       <p key="2">This is row 1</p>,
-    //       <p key="3">This is row 2</p>
-    //     ]
-    //   };
-
-    //   var movieRows = [];
-    //   movies.forEach(movie => {
-    //     const movieRow = <MovieRow movie={movie} />;
-    //     movieRows.push(movieRow);
-    //   });
-
-    //   this.state = { rows: movieRows };
+    this.state = {
+      searchValue: ""
+    };
     this.performSearch("matrix");
   }
 
@@ -61,8 +41,13 @@ class App extends Component {
 
   searchChangeHandler = event => {
     console.log(event.target.value);
-    const searchTerm = event.target.value;
-    this.performSearch(searchTerm);
+    this.performSearch(this.state.searchValue);
+  };
+
+  change = e => {
+    this.setState({
+      searchValue: e.target.value
+    });
   };
 
   render() {
@@ -84,10 +69,15 @@ class App extends Component {
           </tbody>
         </table>
 
-        <input
-          onChange={this.searchChangeHandler}
-          placeholder="Enter search term"
-        />
+        <div>
+          <input
+            onChange={e => this.change(e)}
+            type="text"
+            name="film"
+            placeholder="Enter Movie title ..."
+          />
+          <button onClick={this.searchChangeHandler}>Search</button>
+        </div>
         {this.state.rows}
       </div>
     );
