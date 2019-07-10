@@ -9,7 +9,7 @@ class App extends Component {
     this.state = {
       searchValue: ""
     };
-    this.performSearch("matrix");
+    this.performSearch("searchValue");
   }
 
   performSearch(searchTerm) {
@@ -58,25 +58,27 @@ class App extends Component {
             <tr>
               <td>
                 <img
-                  width="50"
+                  width="120"
                   alt="moviedb-icon"
-                  src={require("./moviedb.JPG")}
+                  src={require("./mdb-logo.png")}
                 />
               </td>
               <td width="8" />
-              <td>MoviedDB Search</td>
+              <td>Search Movies</td>
             </tr>
           </tbody>
         </table>
-
         <div>
           <input
+            className="searchField leftPadding"
             onChange={e => this.change(e)}
             type="text"
             name="film"
             placeholder="Enter Movie title ..."
           />
-          <button onClick={this.searchChangeHandler}>Search</button>
+          <button className="btn" onClick={this.searchChangeHandler}>
+            Search
+          </button>
         </div>
         {this.state.rows}
       </div>
