@@ -1,0 +1,11 @@
+.titleBar {
+  background-color: rgb(7, 64, 52, 1);
+  display: block;
+  color: white;
+  font-size: 24px;
+  padding-left: 16px;
+}
+
+.App {
+  text-align: center;
+}
