@@ -19,3 +19,13 @@
   margin: 16px !important;
   width: 300px !important;
 }
+
+.searchB {
+  padding-left: 16px !important;
+  margin: 16px !important;
+  width: 120px;
+}
+
+.posterBox {
+  border-radius: 5px;
+}
