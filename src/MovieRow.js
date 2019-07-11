@@ -11,7 +11,12 @@ export class MovieRow extends Component {
         <tbody className="cellAlign">
           <tr>
             <td>
-              <img alt="poster" width="120" src={this.props.movie.poster_src} />
+              <img
+                alt="poster"
+                width="120"
+                className="posterBox z-depth-2"
+                src={this.props.movie.poster_src}
+              />
             </td>
             <td>
               <h3>{this.props.movie.title}</h3>

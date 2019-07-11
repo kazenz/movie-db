@@ -76,7 +76,7 @@ class App extends Component {
             name="film"
             placeholder="Enter Movie title ..."
           />
-          <button className="btn" onClick={this.searchChangeHandler}>
+          <button className="btn searchB" onClick={this.searchChangeHandler}>
             Search
           </button>
         </div>
